@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: white;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.navbar .container {
+    display: flex;
+    height: 60px;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    text-decoration: none;
+}
+
+.navbar .container .logo {
+    font-size: x-large;
+    font-weight: bold;
+    flex-grow: 2;
+}
+
+.navbar .container .nav {
+
+    flex-grow: 3;
+
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin: 0px 20px;
+}
+
+li:hover {
+    text-decoration: underline;
+}
+
+.header {
+    background: #B0D051;
+    min-height: 200px;
+}
+
+.header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1.2;
+    margin: 40px 0;
+    text-align: center;
+
+}
+
+.header p {
+    font-size: 1.2rem;
+    line-height: 1.2;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.boxes .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.boxes h2 {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.boxes p {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 0.8rem;
+}
+
+.box {
+    flex: 1; /* keep them all same size */
+    background: rgb(247, 163, 7);
+    margin: 10px 10px;
+    border-radius: 25px;
+    padding: 15px 20px;
+    /* add box shadow */
+}
+
+/* add @media for small screen sizes */
+@media (max-width: 768px) {
+    .boxes .container {
+        display: block; /*could do flex-direction column */
+    }
+    
+}
+

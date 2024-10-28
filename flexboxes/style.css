@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.flex-horizontal .item {
+    width: 100px;
+    height: 100px;
+    background: bisque;
+    color:brown;
+    margin: 10px;
+    /* can also flex within an item*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-vertical .item {
+    width: 100px;
+    height: 100px;
+    background: cyan;
+    color:black;
+    margin: 10px; /*one field means it applied to both x and y*/
+    /* can also flex within an item*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-container {
+    background: lightgray;
+}
+
+.flex-horizontal {
+    display: flex;
+    background-color: rgba(153, 51, 51, 0.2);
+    margin: 10px 0; /*x and y spacing*/
+    height: 200px;
+    align-items: center; /* y movement for row flex */
+    justify-content: end; /* x movement for row flex */
+
+}
+
+.flex-vertical {
+    display: flex;
+    flex-direction: column; /* make it column*/
+    background-color: rgba(115, 156, 88, 0.384);
+    height: 400px;
+    align-items: center; /* x movement for column flex*/
+    justify-content: end; /* y movement for column flex*/
+}
+
+/* justyify content can also be used for space-evenly or space-between items*/
+
+/* moving objects alone*/
+/* all the items have order:0 by default, so be careful 
+ to order all the items, to get a desired order, otherwise
+ order 0 items will show first, and then other order items*/
+.flex-horizontal .item:nth-child(1) {
+    align-self: start;
+    order: 2;
+    flex-grow: 1; /*sets the width ratio, and change the ratio when you play with screen width; try changing the screen width*/
+}
+.flex-horizontal .item:nth-child(3) {
+    align-self: center;
+    flex-grow: 2; /*sets the width ratio, and change the ratio when you play with screen width; try changing the screen width*/
+}
+.flex-horizontal .item:nth-child(2) {
+    align-self: end;
+    order: 2;
+    flex-grow: 1; /*sets the width ratio, and change the ratio when you play with screen width; try changing the screen width*/
+
+}
+
+.flex-vertical .item:nth-child(1) {
+    align-self: start;
+    flex-grow: 1; /*sets the width ratio, and change the ratio when you play with screen width; try changing the screen width*/
+}
+.flex-vertical .item:nth-child(2) {
+    align-self: center;
+    flex-grow: 2; /*sets the width ratio, and change the ratio when you play with screen width; try changing the screen width*/
+
+}
+.flex-vertical .item:nth-child(3) {
+    align-self: end;
+    flex-grow: 1; /*sets the width ratio, and change the ratio when you play with screen width; try changing the screen width*/
+}
+
+/* also check flex-wrap: wrap*/
+/* wraps the content when it cannot fit the screen*/
+
+/* flex-grow will fill up the whole space*/
+/* flex-grow works horizontally and vertically based on flex direction (main axis)*/
+/* I have put flex-grow in vertical flex container, so it grows vertically; try changing .flex-vertical height */ 
+/* flex-grow makes sense horizontally mostly UI wise*/
+
+/* flex-shrink is the opposite of flex-grow*/
+/* it sets the shrink rate*/
+/* when the screen is wide enough, every item stays the full size, but as you shrink the screen size, the items will shrink according 
+ to the flex-shrink rate set */
+
+ /* flex-basis is another way of setting the width*/
+ /* a short hand notation is flex: <grow> <shrink> <basis> */
